@@ -27,13 +27,11 @@ int		main(int argc, char **argv)
 
 	if (argc == 1)
 		printf("./rot \"string\" [rot value]\n");
-	if (argc == 2)
+	else if (argc == 2)
 	{
 		rot = 0;
 		while (rot++ < 25)
 			printf("rot: %.2d - %s\n", rot, ft_rot(argv[1], 1));
-		// for (int i = 0; str[i]; i++)
-			// printf("str[%d] = %d\n", i, str[i]);
 	}
 	else
 		printf("rot: %d - %s\n", atoi(argv[2]) % 26, ft_rot(argv[1], atoi(argv[2]) % 26));
